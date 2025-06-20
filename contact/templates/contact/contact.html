@@ -9,13 +9,21 @@
 
     <p><b>ID:</b> {{ contact.id }}</p>
     <p><b>E-mail:</b> {{ contact.email }}</p>
-    <p><b>Phone:</b> {{ contact.phone }}</p>
-    <p><b>Created Date:</b> {{ contact.created_date }}</p>
-    <p><b>Description:</b> {{ contact.description }}</p>
-    <p><b>Category:</b> {{ contact.category.name }}</p>
+    <p><b>Telefone:</b> {{ contact.phone }}</p>
+    <p><b>Data de Cadastro:</b> {{ contact.created_date }}</p>
+    <p><b>Descrição:</b> {{ contact.description }}</p>
+    <p><b>Categoria:</b> {{ contact.category.name }}</p>
 
-    <button><a href="{% url 'contact:update' contact.id %}">Editar contato</a></button>
-    <button><a href="{% url 'contact:delete' contact.id %}">Deletar contato</a></button>
+    {% if contact.picture %}
+        <p>
+            <img src="{{ contact.picture.url }}" alt="{{ contact.firstName }} {{ contact.lastName }}">
+        </p>
+    {% endif %}
+
+    {% if user == contact.owner %}
+        <button><a href="{% url 'contact:update' contact.id %}">Editar contato</a></button>
+        <button><a href="{% url 'contact:delete' contact.id %}">Deletar contato</a></button>
+    {% endif %}
 </div>
 
 {% endblock %}
