@@ -13,9 +13,9 @@ class Category(models.Model):
         return self.name
 
 class Contact(models.Model):
-    firstName = models.CharField(max_length=50)
-    lastName = models.CharField(max_length=50, blank=True)
-    phone = models.CharField(max_length=50)
+    firstName = models.CharField(max_length=50, verbose_name='Primeiro Nome')
+    lastName = models.CharField(max_length=50, blank=True, verbose_name='Sobrenome')
+    phone = models.CharField(max_length=50, verbose_name='Telefone')
     email = models.EmailField(max_length=254, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)

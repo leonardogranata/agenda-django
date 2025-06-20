@@ -1,0 +1,13 @@
+{% extends "global/base.html" %}
+
+{% block content %}
+  <div class="form-content">
+    <h1>Excluir Contato</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <p id='confirm-delete'>Tem certeza que você deseja excluir esse contato?</p>
+      <button type="submit">Excluir</button>
+      <a id='cancel' href="{% url 'contact:contact' contact_id=contact.id %}">Cancelar</a>
+    </form>
+  </div>
+{% endblock content %}

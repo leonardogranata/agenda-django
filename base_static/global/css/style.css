@@ -312,3 +312,90 @@ svg {
   filter: brightness(80%);
   box-shadow: 0 0 5px var(--link-dark-color);
 }
+
+.single-contact button {
+  background-color: var(--clr-black);
+  border: none;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.single-contact button a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: var(--spacing);
+}
+
+.single-contact button a:hover {
+  background: var(--clr-light-shadow-10);
+}
+
+.form-content {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: 0.3s border-color ease-in-out;
+  }
+
+  .form-control:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: 30px auto 0;
+    background-color: var(--clr-black);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s background-color ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0c2535;
+  }
+
+  #confirm-delete {
+    text-align: center;
+  }
+
+  #cancel {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    text-decoration: none;
+    color: var(--clr-black)
+  }
+
+  #cancel:hover {
+    text-decoration: underline;
+  }
